@@ -58,5 +58,12 @@ int main(){
     for(int i=0;i<SIZE;i++){
         cout<<data[i]<<"\t";
     }
+    cout<<endl<<endl<<endl;
+
+    quickSort(data,0,SIZE-1);
+
+    for(int i=0;i<SIZE;i++){
+        cout<<data[i]<<"\t";
+    }
     cout<<endl;
 }
