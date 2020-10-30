@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define SIZE 100
+#define SIZE 10000
 int data[SIZE];
 
 void RandomDataWrite(char *FileName){
@@ -53,17 +53,26 @@ void quickSort(int *arr, int low, int high){
 }
 
 int main(){
+    clock_t start, end;
+
     RandomDataWrite("RandomIntegers.txt");
     ReadFromFIle("RandomIntegers.txt");
+
     for(int i=0;i<SIZE;i++){
         cout<<data[i]<<"\t";
     }
     cout<<endl<<endl<<endl;
 
+    start = clock();
     quickSort(data,0,SIZE-1);
+    end = clock();
 
+    cout<<"Array sorted by Quick sort: "<<endl;
     for(int i=0;i<SIZE;i++){
         cout<<data[i]<<"\t";
     }
     cout<<endl;
+
+    double time_taken = ((double)(end-start))/CLOCKS_PER_SEC;           //in seconds
+    cout<<endl<<endl<<"Quick Sort Function took "<<time_taken<<" seconds to execute"<<endl<<endl;
 }
