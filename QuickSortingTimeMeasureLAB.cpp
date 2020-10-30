@@ -199,4 +199,5 @@ int main(){
     time_taken = ((double)(end-start))/CLOCKS_PER_SEC; // in seconds
 
     printf("\nTernary Seach Function took %f seconds to execute \n", time_taken);
+
 }
