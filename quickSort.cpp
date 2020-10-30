@@ -4,8 +4,8 @@ using namespace std;
 int Partition(int *arr, int low, int high){
     int pivot = arr[high];
     int i = low - 1;
-    for(int j=0;j<high;j++){
-        if(pivot>arr[j]){
+    for(int j=low;j<high;j++){
+        if(arr[j]<=pivot){
             i++;
             int temp = arr[i];
             arr[i] = arr[j];
@@ -29,7 +29,7 @@ void quickSort(int *arr, int low, int high){
 }
 
 int main(){
-    int arr[] = { 9, 4, 7, 10, 8, 5, 1, 3, 2, 6};
+    int arr[] = { 9, 4, 7, 10, 4, 4, 8, 5, 1, 3, 2, 6};
 
     int n = sizeof(arr)/sizeof(arr[0]);
 
