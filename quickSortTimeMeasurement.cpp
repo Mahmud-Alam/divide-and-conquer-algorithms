@@ -25,6 +25,14 @@ void ReadFromFIle(char *FileName){
     fclose(fp);
 }
 
+void quickSort(int *arr, int low, int high){
+    if(low<high){
+        int q = Partition(arr,low,high);
+        quickSort(arr,low,q-1);
+        quickSort(arr,q+1,high);
+    }
+}
+
 int main(){
     RandomDataWrite("RandomIntegers.txt");
     ReadFromFIle("RandomIntegers.txt");
