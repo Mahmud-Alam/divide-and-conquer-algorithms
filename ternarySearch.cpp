@@ -5,6 +5,13 @@ int ternarySearch(int l, int r, int key, int *arr){
     if(r>=l){
         int mid1 = l+(r-1)/3;
         int mid2 = r-(r-1)/3;
+
+        if(arr[mid1]==key) return mid1;
+        if(arr[mid2]==key) return mid2;
+
+        if(key<arr[mid1])
+            return ternarySearch(l,mid-1,key,arr);
+        if(key>arr[mid2])
     }
 }
 
