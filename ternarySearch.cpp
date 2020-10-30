@@ -12,5 +12,12 @@ int main(){
 
     cout<<"Input Search key: ";cin>>key;
 
-    int value = ternarySearch(0, n-1, key, arr);
+    int index = ternarySearch(0, n-1, key, arr);
+
+    if(index!=-1){
+        cout<<endl<<key<<" is found in Index: "<<index<<endl;
+    }
+    else{
+        cout<<endl<<"Key is not found!"<<endl;
+    }
 }
