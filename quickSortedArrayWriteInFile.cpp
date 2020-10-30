@@ -33,6 +33,14 @@ void SortedDataWrite(char *FileName){
     fclose(fp);
 }
 
+void SortedDataRead(int *arr, char *FileName){
+    FILE *fp = fopen(FileName,"r");
+    for(int i=0;i<SIZE;i++){
+        fscanf(fp,"%d",&arr[i]);
+    }
+    fclose(fp);
+}
+
 int Partition(int *arr, int low, int high){
     int pivot = arr[high];
     int i = low-1;
@@ -72,10 +80,11 @@ int main(){
     quickSort(data,0,SIZE-1);
 
     SortedDataWrite("SortedIntegers.txt");
+    SortedDataRead(sortedData,"SortedIntegers.txt");
 
     cout<<endl<<endl<<endl<<"Array sorted by Quick sort: "<<endl<<endl;
     for(int i=0;i<SIZE;i++){
-        cout<<data[i]<<"\t";
+        cout<<sortedData[i]<<"\t";
     }
     cout<<endl;
 }
