@@ -24,5 +24,9 @@ void ReadFromFIle(char *FileName){
 
 int main(){
     RandomDataWrite("RandomIntegers.txt");
-
+    ReadFromFIle("RandomIntegers.txt");
+    for(int i=0;i<SIZE;i++){
+        cout<<data[i]<<"\t";
+    }
+    cout<<endl;
 }
