@@ -5,8 +5,19 @@ int Partition(int *arr, int low, int high){
     int pivot = arr[high];
     int i = low - 1;
     for(int j=0;j<high;j++){
-
+        if(pivot>arr[j]){
+            i++;
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
     }
+    i++;
+    int temp = arr[i];
+    arr[i] = arr[high];
+    arr[high] = temp;
+
+    return i;
 }
 
 void quickSort(int *arr, int low, int high){
