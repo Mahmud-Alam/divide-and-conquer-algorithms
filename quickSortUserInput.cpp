@@ -30,7 +30,7 @@ void quickSort(int *arr, int low, int high){
 
 int main(){
     int arr[100],value,i=0;
-    cout<<"Input values(type 1024 to stop): ";
+    cout<<"Input values(type 1024 to stop): "<<endl;
     while(1){
         cin>>value;
         if(value==1024) break;
