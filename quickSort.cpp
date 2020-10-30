@@ -1,7 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void quickSort(int arr, int low, int high){
+int Partition(int *arr, int low, int high){
+    int pivot = arr[high];
+    int i = low - 1;
+    for(int j=0;j<high;j++){
+
+    }
+}
+
+void quickSort(int *arr, int low, int high){
     if(low<high){
         int q = Partition(arr,low,high);
         quickSort(arr,low,q-1);
