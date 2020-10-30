@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int ternarySearch(int key, int n, int *arr){
+int ternarySearch(int l, int r, int key, int *arr){
 
 }
 
@@ -12,5 +12,5 @@ int main(){
 
     cout<<"Input Search key: ";cin>>key;
 
-    int value = ternarySearch(key,n,arr);
+    int value = ternarySearch(0, n-1, key, arr);
 }
