@@ -1,12 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define SIZE 10
+#define SIZE 100
 int data[SIZE];
 
 void RandomDataWrite(char *FileName){
+    time_t t;
     FILE *fp = fopen(FileName,"w");
-    srand(time(NULL));
+
+    //srand(time(NULL));
+    srand((unsigned)time(&t));
 
     for(int i=0;i<SIZE;i++){
         fprintf(fp,"%d\n",rand()%INT_MAX+1);
