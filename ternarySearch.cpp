@@ -11,8 +11,11 @@ int ternarySearch(int l, int r, int key, int *arr){
 
         if(key<arr[mid1])
             return ternarySearch(l,mid-1,key,arr);
-        if(key>arr[mid2])
+        else if(key>arr[mid2])
+            return ternarySearch(mid2+1,r,key,arr);
+        else return ternarySearch(mid1+1,mid2-1,key,arr)
     }
+    return -1;
 }
 
 int main(){
