@@ -14,6 +14,15 @@ void RandomDataWrite(char *FileName){
     fclose(fp);
 }
 
+void ReadFromFIle(char *FileName){
+    FILE *fp = fopen(FileName,"r");
+    for(int i=0;i<SIZE;i++){
+        fscanf(fp,"%d",&data[i]);
+    }
+    fclose(fp);
+}
+
 int main(){
     RandomDataWrite("RandomIntegers.txt");
+
 }
