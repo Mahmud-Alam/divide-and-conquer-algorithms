@@ -21,7 +21,7 @@ int ternarySearch(int low, int high, int key, int *arr){
 
 int main(){
     int key;
-    int arr[] = {1,2,3,4,5,6,7,8,9,11,15,16,17,18,19};
+    int arr[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21};
 
     int n = sizeof(arr)/sizeof(arr[0]);
 
