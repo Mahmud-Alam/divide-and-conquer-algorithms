@@ -1,7 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void mergeSort(int low,int high, int arr){
+void mergeArray(int low, int mid, int high, int *arr){
+    int n1 = mid-low+1;
+    int n2 = high-mid;
+
+    int left[n1],right[n2];
+
+}
+
+void mergeSort(int low,int high, int *arr){
     if(low<high){
         int mid = (high+low)/2;
 
