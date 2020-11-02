@@ -25,6 +25,17 @@ void mergeArray(int low, int mid, int high, int *arr){
         }
         k++;
     }
+
+    while(i<n1){
+        arr[k] = left[i];
+        i++;
+        k++;
+    }
+    while(j<n2){
+        arr[k] = right[j];
+        j++;
+        k++;
+    }
 }
 
 void mergeSort(int low, int high, int *arr){
